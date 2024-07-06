@@ -3,14 +3,7 @@
 import { useRef, useState } from "react";
 import { Input } from "./ui/input";
 import { Button } from "./ui/button";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "./ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
 
 export const CurrencyConverter = () => {
   const [result, setResult] = useState<undefined | number>(undefined);
@@ -35,7 +28,7 @@ export const CurrencyConverter = () => {
     <>
       <Card>
         <CardHeader>
-          <CardTitle>Convert DKK to Eur</CardTitle>
+          <CardTitle>Convert DKK 🇩🇰</CardTitle>
         </CardHeader>
         <CardContent>
           <div className="grid grid-cols-2 gap-4">
@@ -44,7 +37,7 @@ export const CurrencyConverter = () => {
               {result} €
             </Button>
           </div>
-          <Button className="w-full mt-4" onClick={handleConvertClick}>
+          <Button className="w-full mt-6" onClick={handleConvertClick}>
             convert
           </Button>
         </CardContent>
