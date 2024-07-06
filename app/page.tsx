@@ -1,11 +1,9 @@
 import { CurrencyConverter } from "@/components/CurrencyConverter";
 import { ThemeToggle } from "@/components/ThemeToggle";
-import { Input } from "@/components/ui/input";
-import Image from "next/image";
 
 export default function Home() {
   return (
-    <main>
+    <main className="px-4">
       <ThemeToggle />
       <CurrencyConverter />
     </main>

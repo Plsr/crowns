@@ -3,30 +3,52 @@
 import { useRef, useState } from "react";
 import { Input } from "./ui/input";
 import { Button } from "./ui/button";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "./ui/card";
 
 export const CurrencyConverter = () => {
   const [result, setResult] = useState<undefined | number>(undefined);
-  const inputRef = useRef<HTMLInputElement | null>(null);
+  const dkkInputRef = useRef<HTMLInputElement | null>(null);
+  const eurInputRef = useRef<HTMLInputElement | null>(null);
 
   const handleConvertClick = () => {
-    if (!inputRef.current) {
+    if (!dkkInputRef.current) {
       return;
     }
 
-    if (isNaN(parseInt(inputRef.current?.value))) {
+    if (isNaN(parseInt(dkkInputRef.current?.value))) {
       return;
     }
 
     const rate = 0.13;
 
-    setResult(parseInt(inputRef.current.value) * rate);
+    setResult(parseInt(dkkInputRef.current.value) * rate);
   };
 
   return (
     <>
-      <Input type="number" placeholder="DKK" ref={inputRef} />
-      <Button onClick={handleConvertClick}>convert</Button>
-      <div>{result} Eur</div>
+      <Card>
+        <CardHeader>
+          <CardTitle>Convert DKK to Eur</CardTitle>
+        </CardHeader>
+        <CardContent>
+          <div className="grid grid-cols-2 gap-4">
+            <Input type="number" placeholder="DKK" ref={dkkInputRef} />
+            <Button variant="secondary" disabled>
+              {result} €
+            </Button>
+          </div>
+          <Button className="w-full mt-4" onClick={handleConvertClick}>
+            convert
+          </Button>
+        </CardContent>
+      </Card>
     </>
   );
 };
