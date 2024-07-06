@@ -1,10 +1,22 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 type TODO = any;
 
 export const PWALifecycle = () => {
+  const [hasWindow, setHasWindow] = useState(false);
+
+  useEffect(() => {
+    if (hasWindow) {
+      return;
+    }
+
+    if (typeof window !== "undefined") {
+      setHasWindow(true);
+    }
+  }, [setHasWindow, hasWindow]);
+
   useEffect(() => {
     if (
       typeof window !== "undefined" &&
@@ -83,7 +95,7 @@ export const PWALifecycle = () => {
       // never forget to call register as auto register is turned off in next.config.js
       wb.register();
     }
-  }, []);
+  }, [hasWindow]);
 
   return <></>;
 };
