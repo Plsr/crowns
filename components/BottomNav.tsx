@@ -7,6 +7,7 @@ import { useSelectedLayoutSegment } from "next/navigation";
 import clsx from "clsx";
 
 export const BottomNav = () => {
+  return null;
   const segment = useSelectedLayoutSegment();
   console.log(segment);
 

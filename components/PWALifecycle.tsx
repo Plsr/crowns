@@ -18,12 +18,17 @@ export const PWALifecycle = () => {
   }, [setHasWindow, hasWindow]);
 
   useEffect(() => {
+    console.log(typeof window !== "undefined");
+    console.log("serviceWorker" in navigator);
+    // TODO: This is undefined
+    console.log(window.workbox !== undefined);
     if (
       typeof window !== "undefined" &&
       "serviceWorker" in navigator &&
       (window as any).workbox !== undefined
     ) {
       const wb = (window as any).workbox;
+      console.log(wb);
       // add event listeners to handle any of PWA lifecycle event
       // https://developers.google.com/web/tools/workbox/reference-docs/latest/module-workbox-window.Workbox#events
       wb.addEventListener("installed", (event: TODO) => {

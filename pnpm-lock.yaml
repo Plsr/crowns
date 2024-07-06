@@ -20,6 +20,9 @@ importers:
       '@radix-ui/react-slot':
         specifier: ^1.1.0
         version: 1.1.0(@types/react@18.3.3)(react@18.3.1)
+      '@types/workbox-window':
+        specifier: ^5.0.0
+        version: 5.0.0
       class-variance-authority:
         specifier: ^0.7.0
         version: 0.7.0
@@ -1171,6 +1174,10 @@ packages:
 
   '@types/trusted-types@2.0.7':
     resolution: {integrity: sha512-ScaPdn1dQczgbl0QFTeTOmVHFULt394XJgOQNoyVhZ6r2vLnMLJfBPd53SB52T/3G36VI1/g2MZaX0cwDuXsfw==}
+
+  '@types/workbox-window@5.0.0':
+    resolution: {integrity: sha512-AAUnws51yqkLuCHRM6L2nclwkkaIT6i2r+KnoUjopAcfQdHz4F6YAzoxFZFGQZbgwNIBmCtEyBFGFCbf1pb+SQ==}
+    deprecated: This is a stub types definition. workbox-window provides its own type definitions, so you do not need this installed.
 
   '@typescript-eslint/parser@7.2.0':
     resolution: {integrity: sha512-5FKsVcHTk6TafQKQbuIVkXq58Fnbkd2wDL4LB7AURN7RUOu1utVP+G8+6u3ZhEroW3DF6hyo3ZEXxgKgp4KeCg==}
@@ -4511,6 +4518,10 @@ snapshots:
       '@types/node': 20.14.9
 
   '@types/trusted-types@2.0.7': {}
+
+  '@types/workbox-window@5.0.0':
+    dependencies:
+      workbox-window: 6.6.0
 
   '@typescript-eslint/parser@7.2.0(eslint@8.57.0)(typescript@5.5.3)':
     dependencies:
