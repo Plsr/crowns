@@ -1,4 +1,4 @@
-import { Workbox } from "workbox-window";
+import { Workbox } from "@types/workbox-window";
 
 declare global {
   interface Window {
