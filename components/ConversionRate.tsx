@@ -1,5 +1,5 @@
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
-import { BanknotesIcon } from "@heroicons/react/16/solid";
+import { Coins } from "lucide-react";
 
 const rate = 0.13;
 
@@ -9,7 +9,7 @@ export const ConversionRate = () => {
       <CardHeader>
         <CardTitle>
           <div className="flex items-center gap-4">
-            <BanknotesIcon className="h-6 w-6" />
+            <Coins className="h-6 w-6" />
             <span>Conversion Rate</span>
           </div>
         </CardTitle>

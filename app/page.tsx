@@ -1,11 +1,14 @@
 import { ConversionRate } from "@/components/ConversionRate";
 import { CurrencyConverter } from "@/components/CurrencyConverter";
-import { ThemeToggle } from "@/components/ThemeToggle";
+import { Header } from "@/components/header";
+import { Separator } from "@/components/ui/separator";
 
 export default function Home() {
   return (
     <main className="px-4">
-      <ThemeToggle />
+      <Header />
+      <Separator />
+      <div className="h-4" />
       <div className="flex flex-col gap-6">
         <CurrencyConverter />
         <ConversionRate />
