@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "next-themes";
 import { PWALifecycle } from "@/components/PWALifecycle";
+import { BottomNav } from "@/components/BottomNav";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -57,14 +58,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="h-full">
       <head>
         <meta name="mobile-web-app-capable" content="yes" />
         <meta name="msapplication-config" content="/icons/browserconfig.xml" />
         <meta name="msapplication-TileColor" content="#2B5797" />
         <meta name="msapplication-tap-highlight" content="no" />
       </head>
-      <body className={inter.className}>
+      <body className={`${inter.className} h-full flex flex-col`}>
         <PWALifecycle />
         <ThemeProvider
           attribute="class"
@@ -73,6 +74,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           {children}
+          <BottomNav />
         </ThemeProvider>
       </body>
     </html>

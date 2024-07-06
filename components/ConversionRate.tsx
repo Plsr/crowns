@@ -9,7 +9,7 @@ export const ConversionRate = () => {
       <CardHeader>
         <CardTitle>
           <div className="flex items-center gap-4">
-            <Coins className="h-6 w-6" />
+            <Coins className="h-4 w-4" />
             <span>Conversion Rate</span>
           </div>
         </CardTitle>
